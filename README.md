@@ -2,7 +2,7 @@
 
 ## 📌 Project Description
 
-This project is a simple and user-friendly **Medical Store Website** designed to help customers check medicine availability, place orders, and access pharmacy services online. It aims to solve common problems faced by local medical stores and customers.
+This project is a simple and user-friendly **Medical Store Website** designed to help owmer check medicine availability, place orders, and access pharmacy services online. It aims to solve common problems faced by local medical stores and customers.
 
 ---
 
