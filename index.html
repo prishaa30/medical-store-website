@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedStock - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-brand">
+        <h2>&#9764; MedStock</h2>
+        <p>Inventory Manager</p>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="index.html" class="active"><span class="nav-icon">&#9751;</span> Dashboard</a></li>
+        <li><a href="inventory.html"><span class="nav-icon">&#9881;</span> Inventory</a></li>
+        <li><a href="add-medicine.html"><span class="nav-icon">&#10010;</span> Add Medicine</a></li>
+        <li><a href="expiry.html"><span class="nav-icon">&#9200;</span> Expiry Tracker</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        MedStock v1.0 &mdash; Made for Indian Medical Stores
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Dashboard</h1>
+        <p>Welcome back! Here's your store overview for today.</p>
+      </div>
+
+      <!-- Stats Cards -->
+      <section class="stats-grid">
+        <div class="stat-card success">
+          <div class="stat-icon">&#128138;</div>
+          <div class="stat-value">248</div>
+          <div class="stat-label">Total Medicines</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">&#128230;</div>
+          <div class="stat-value">1,420</div>
+          <div class="stat-label">Items In Stock</div>
+        </div>
+        <div class="stat-card warning">
+          <div class="stat-icon">&#9888;</div>
+          <div class="stat-value">18</div>
+          <div class="stat-label">Low Stock Items</div>
+        </div>
+        <div class="stat-card danger">
+          <div class="stat-icon">&#128680;</div>
+          <div class="stat-value">7</div>
+          <div class="stat-label">Expiring Soon</div>
+        </div>
+      </section>
+
+      <!-- Quick Actions -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Quick Actions</h2>
+        </div>
+        <div class="card-body">
+          <div class="quick-actions">
+            <a href="add-medicine.html" class="quick-action-card">
+              <div class="action-icon">&#10010;</div>
+              <div class="action-label">Add Medicine</div>
+              <div class="action-desc">Add new stock entry</div>
+            </a>
+            <a href="inventory.html" class="quick-action-card">
+              <div class="action-icon">&#128203;</div>
+              <div class="action-label">View Inventory</div>
+              <div class="action-desc">See all medicines</div>
+            </a>
+            <a href="expiry.html" class="quick-action-card">
+              <div class="action-icon">&#128197;</div>
+              <div class="action-label">Check Expiry</div>
+              <div class="action-desc">Track expiry dates</div>
+            </a>
+            <a href="inventory.html" class="quick-action-card">
+              <div class="action-icon">&#128200;</div>
+              <div class="action-label">Stock Report</div>
+              <div class="action-desc">Low stock alerts</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two Column Section -->
+      <div class="two-col">
+
+        <!-- Recent Additions -->
+        <div class="card">
+          <div class="card-header">
+            <h2>Recently Added</h2>
+          </div>
+          <div class="card-body">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Medicine</th>
+                    <th>Qty</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Paracetamol 500mg</td>
+                    <td>200</td>
+                    <td>10 Mar 2026</td>
+                  </tr>
+                  <tr>
+                    <td>Amoxicillin 250mg</td>
+                    <td>100</td>
+                    <td>09 Mar 2026</td>
+                  </tr>
+                  <tr>
+                    <td>Cetirizine 10mg</td>
+                    <td>150</td>
+                    <td>08 Mar 2026</td>
+                  </tr>
+                  <tr>
+                    <td>ORS Powder</td>
+                    <td>300</td>
+                    <td>07 Mar 2026</td>
+                  </tr>
+                  <tr>
+                    <td>Ibuprofen 400mg</td>
+                    <td>80</td>
+                    <td>06 Mar 2026</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Low Stock Alerts -->
+        <div class="card">
+          <div class="card-header">
+            <h2>&#9888; Low Stock Alerts</h2>
+          </div>
+          <div class="card-body">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Medicine</th>
+                    <th>Stock</th>
+                    <th>Level</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Metformin 500mg</td>
+                    <td>5</td>
+                    <td>
+                      <div class="stock-bar"><div class="stock-bar-fill low"></div></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Azithromycin 500mg</td>
+                    <td>8</td>
+                    <td>
+                      <div class="stock-bar"><div class="stock-bar-fill low"></div></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Omeprazole 20mg</td>
+                    <td>12</td>
+                    <td>
+                      <div class="stock-bar"><div class="stock-bar-fill medium"></div></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Dolo 650mg</td>
+                    <td>15</td>
+                    <td>
+                      <div class="stock-bar"><div class="stock-bar-fill medium"></div></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Crocin Advance</td>
+                    <td>3</td>
+                    <td>
+                      <div class="stock-bar"><div class="stock-bar-fill low"></div></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
