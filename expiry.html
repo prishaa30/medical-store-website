@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedStock - Expiry Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-brand">
+        <h2>&#9764; MedStock</h2>
+        <p>Inventory Manager</p>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="index.html"><span class="nav-icon">&#9751;</span> Dashboard</a></li>
+        <li><a href="inventory.html"><span class="nav-icon">&#9881;</span> Inventory</a></li>
+        <li><a href="add-medicine.html"><span class="nav-icon">&#10010;</span> Add Medicine</a></li>
+        <li><a href="expiry.html" class="active"><span class="nav-icon">&#9200;</span> Expiry Tracker</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        MedStock v1.0 &mdash; Made for Indian Medical Stores
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Expiry Tracker</h1>
+        <p>Monitor medicine expiry dates to prevent losses and ensure patient safety</p>
+      </div>
+
+      <!-- Summary Stats -->
+      <section class="stats-grid">
+        <div class="stat-card danger">
+          <div class="stat-icon">&#10060;</div>
+          <div class="stat-value">3</div>
+          <div class="stat-label">Already Expired</div>
+        </div>
+        <div class="stat-card warning">
+          <div class="stat-icon">&#9888;</div>
+          <div class="stat-value">4</div>
+          <div class="stat-label">Expiring in 30 Days</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">&#128340;</div>
+          <div class="stat-value">11</div>
+          <div class="stat-label">Expiring in 90 Days</div>
+        </div>
+        <div class="stat-card success">
+          <div class="stat-icon">&#9989;</div>
+          <div class="stat-value">230</div>
+          <div class="stat-label">Safe (&gt;90 Days)</div>
+        </div>
+      </section>
+
+      <!-- EXPIRED -->
+      <div class="expiry-group">
+        <div class="expiry-group-title expired">
+          &#10060; EXPIRED &mdash; Remove from shelf immediately
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Medicine</th>
+                    <th>Batch No.</th>
+                    <th>Manufacturer</th>
+                    <th>Expiry Date</th>
+                    <th>Stock</th>
+                    <th>Est. Loss (&#8377;)</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Ranitidine 150mg</strong></td>
+                    <td>BT-2023-088</td>
+                    <td>GSK</td>
+                    <td><span class="badge badge-danger">Jan 2026</span></td>
+                    <td>25</td>
+                    <td>375.00</td>
+                    <td><span class="badge badge-danger">Dispose</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Vitamin B Complex Syrup</strong></td>
+                    <td>SY-2023-045</td>
+                    <td>Abbott India</td>
+                    <td><span class="badge badge-danger">Feb 2026</span></td>
+                    <td>8</td>
+                    <td>560.00</td>
+                    <td><span class="badge badge-danger">Dispose</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Betadine Gargle 100ml</strong></td>
+                    <td>OT-2023-067</td>
+                    <td>Win-Medicare</td>
+                    <td><span class="badge badge-danger">Dec 2025</span></td>
+                    <td>6</td>
+                    <td>510.00</td>
+                    <td><span class="badge badge-danger">Dispose</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXPIRING SOON (within 30 days) -->
+      <div class="expiry-group">
+        <div class="expiry-group-title expiring-soon">
+          &#9888; EXPIRING SOON &mdash; Within 30 days (sell first or return to distributor)
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Medicine</th>
+                    <th>Batch No.</th>
+                    <th>Manufacturer</th>
+                    <th>Expiry Date</th>
+                    <th>Stock</th>
+                    <th>Days Left</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Digene Gel 200ml</strong></td>
+                    <td>SY-2024-023</td>
+                    <td>Abbott</td>
+                    <td><span class="badge badge-warning">Mar 2026</span></td>
+                    <td>4</td>
+                    <td>19</td>
+                    <td><span class="badge badge-warning">Sell / Return</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Camphor Cream 50g</strong></td>
+                    <td>OT-2024-089</td>
+                    <td>Amrutanjan</td>
+                    <td><span class="badge badge-warning">Mar 2026</span></td>
+                    <td>12</td>
+                    <td>22</td>
+                    <td><span class="badge badge-warning">Sell / Return</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Norflox-TZ</strong></td>
+                    <td>BT-2024-102</td>
+                    <td>Cipla Ltd</td>
+                    <td><span class="badge badge-warning">Apr 2026</span></td>
+                    <td>10</td>
+                    <td>28</td>
+                    <td><span class="badge badge-warning">Sell / Return</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dolo 650mg</strong></td>
+                    <td>BT-2024-067</td>
+                    <td>Micro Labs</td>
+                    <td><span class="badge badge-warning">Apr 2026</span></td>
+                    <td>15</td>
+                    <td>30</td>
+                    <td><span class="badge badge-warning">Sell / Return</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXPIRING IN 90 DAYS -->
+      <div class="expiry-group">
+        <div class="expiry-group-title safe">
+          &#128340; EXPIRING IN 31-90 DAYS &mdash; Monitor and prioritize for sale
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Medicine</th>
+                    <th>Batch No.</th>
+                    <th>Manufacturer</th>
+                    <th>Expiry Date</th>
+                    <th>Stock</th>
+                    <th>Days Left</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Ciprodex Ear Drops 10ml</strong></td>
+                    <td>OT-2024-023</td>
+                    <td>Alcon India</td>
+                    <td>Jun 2026</td>
+                    <td>10</td>
+                    <td>82</td>
+                    <td><span class="badge badge-info">Monitor</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ranitidine Inj. 2ml</strong></td>
+                    <td>IN-2024-023</td>
+                    <td>Cipla Ltd</td>
+                    <td>Apr 2026</td>
+                    <td>7</td>
+                    <td>35</td>
+                    <td><span class="badge badge-info">Monitor</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Electral Powder</strong></td>
+                    <td>OT-2024-056</td>
+                    <td>FDC Ltd</td>
+                    <td>May 2026</td>
+                    <td>45</td>
+                    <td>60</td>
+                    <td><span class="badge badge-info">Monitor</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Insulin Glargine 3ml</strong></td>
+                    <td>IN-2024-001</td>
+                    <td>Sanofi India</td>
+                    <td>Aug 2026</td>
+                    <td>25</td>
+                    <td>88</td>
+                    <td><span class="badge badge-info">Monitor</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expiry Guidelines -->
+      <div class="card">
+        <div class="card-header">
+          <h2>&#128218; Expiry Management Guidelines</h2>
+        </div>
+        <div class="card-body">
+          <details>
+            <summary>What to do with expired medicines?</summary>
+            <div class="details-content">
+              <p>As per Indian Drug &amp; Cosmetics Act:</p>
+              <ul style="margin: 0.5rem 0 0 1.5rem;">
+                <li>Remove expired medicines from the shelf immediately</li>
+                <li>Store separately in a marked &ldquo;Expired&rdquo; area</li>
+                <li>Contact the distributor for return/credit within 30 days</li>
+                <li>Maintain a register of expired medicines for audit</li>
+                <li>Dispose as per local pharmacy guidelines</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary>How to claim credit for expired stock?</summary>
+            <div class="details-content">
+              <ul style="margin: 0 0 0 1.5rem;">
+                <li>Contact the distributor or company representative</li>
+                <li>Keep the original invoice and batch details ready</li>
+                <li>Most companies accept returns up to 6 months post-expiry</li>
+                <li>Credit notes are usually issued within 30-60 days</li>
+                <li>Maintain a copy of all return receipts</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary>FIFO Method &mdash; First Expiry, First Out</summary>
+            <div class="details-content">
+              <p>Always sell medicines with the <strong>nearest expiry date first</strong>. When restocking shelves:</p>
+              <ul style="margin: 0.5rem 0 0 1.5rem;">
+                <li>Place newer stock at the back</li>
+                <li>Move older stock to the front</li>
+                <li>Check expiry dates weekly for fast-moving items</li>
+                <li>Check expiry dates monthly for slow-moving items</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>

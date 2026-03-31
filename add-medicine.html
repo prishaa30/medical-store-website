@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedStock - Add Medicine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-brand">
+        <h2>&#9764; MedStock</h2>
+        <p>Inventory Manager</p>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="index.html"><span class="nav-icon">&#9751;</span> Dashboard</a></li>
+        <li><a href="inventory.html"><span class="nav-icon">&#9881;</span> Inventory</a></li>
+        <li><a href="add-medicine.html" class="active"><span class="nav-icon">&#10010;</span> Add Medicine</a></li>
+        <li><a href="expiry.html"><span class="nav-icon">&#9200;</span> Expiry Tracker</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        MedStock v1.0 &mdash; Made for Indian Medical Stores
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Add New Medicine</h1>
+        <p>Fill in the details below to add a medicine to your inventory</p>
+      </div>
+
+      <!-- Add Medicine Form -->
+      <div class="card">
+        <div class="card-header">
+          <h2>&#128138; Medicine Details</h2>
+        </div>
+        <div class="card-body">
+          <form action="#" method="post">
+
+            <!-- Basic Info -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Medicine Name *</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Paracetamol 500mg" required>
+              </div>
+              <div class="form-group">
+                <label for="generic">Generic Name</label>
+                <input type="text" id="generic" name="generic" placeholder="e.g. Acetaminophen">
+              </div>
+            </div>
+
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="category">Category *</label>
+                <select id="category" name="category" required>
+                  <option value="">Select Category</option>
+                  <option value="tablet">Tablet</option>
+                  <option value="capsule">Capsule</option>
+                  <option value="syrup">Syrup</option>
+                  <option value="injection">Injection</option>
+                  <option value="ointment">Ointment / Cream</option>
+                  <option value="drops">Drops (Eye/Ear/Nasal)</option>
+                  <option value="powder">Powder / Sachet</option>
+                  <option value="spray">Spray</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="batch">Batch Number *</label>
+                <input type="text" id="batch" name="batch" placeholder="e.g. BT-2024-001" required>
+              </div>
+              <div class="form-group">
+                <label for="manufacturer">Manufacturer *</label>
+                <input type="text" id="manufacturer" name="manufacturer" placeholder="e.g. Cipla Ltd" required>
+              </div>
+            </div>
+
+            <!-- Pricing & Stock -->
+            <details open>
+              <summary>&#128176; Pricing &amp; Stock</summary>
+              <div class="details-content">
+                <div class="form-row-3">
+                  <div class="form-group">
+                    <label for="mrp">MRP (&#8377;) *</label>
+                    <input type="number" id="mrp" name="mrp" placeholder="e.g. 32.00" step="0.01" min="0" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="purchase-price">Purchase Price (&#8377;)</label>
+                    <input type="number" id="purchase-price" name="purchase_price" placeholder="e.g. 22.00" step="0.01" min="0">
+                  </div>
+                  <div class="form-group">
+                    <label for="gst">GST (%)</label>
+                    <select id="gst" name="gst">
+                      <option value="0">0%</option>
+                      <option value="5">5%</option>
+                      <option value="12" selected>12%</option>
+                      <option value="18">18%</option>
+                      <option value="28">28%</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row-3">
+                  <div class="form-group">
+                    <label for="quantity">Quantity *</label>
+                    <input type="number" id="quantity" name="quantity" placeholder="e.g. 200" min="0" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="min-stock">Minimum Stock Level</label>
+                    <input type="number" id="min-stock" name="min_stock" placeholder="e.g. 20" min="0">
+                  </div>
+                  <div class="form-group">
+                    <label for="unit">Unit</label>
+                    <select id="unit" name="unit">
+                      <option value="strips">Strips</option>
+                      <option value="bottles">Bottles</option>
+                      <option value="vials">Vials</option>
+                      <option value="tubes">Tubes</option>
+                      <option value="sachets">Sachets</option>
+                      <option value="pieces">Pieces</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <!-- Dates -->
+            <details open>
+              <summary>&#128197; Dates</summary>
+              <div class="details-content">
+                <div class="form-row-3">
+                  <div class="form-group">
+                    <label for="mfg-date">Manufacturing Date</label>
+                    <input type="month" id="mfg-date" name="mfg_date">
+                  </div>
+                  <div class="form-group">
+                    <label for="exp-date">Expiry Date *</label>
+                    <input type="month" id="exp-date" name="exp_date" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="purchase-date">Purchase Date</label>
+                    <input type="date" id="purchase-date" name="purchase_date">
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <!-- Supplier Info -->
+            <details>
+              <summary>&#128666; Supplier Information</summary>
+              <div class="details-content">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="supplier">Supplier Name</label>
+                    <input type="text" id="supplier" name="supplier" placeholder="e.g. Mehta Medical Distributors">
+                  </div>
+                  <div class="form-group">
+                    <label for="supplier-phone">Supplier Phone</label>
+                    <input type="tel" id="supplier-phone" name="supplier_phone" placeholder="e.g. +91 98765 43210">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="invoice">Invoice Number</label>
+                  <input type="text" id="invoice" name="invoice" placeholder="e.g. INV-2024-0456">
+                </div>
+              </div>
+            </details>
+
+            <!-- Notes -->
+            <details>
+              <summary>&#128221; Additional Notes</summary>
+              <div class="details-content">
+                <div class="form-group">
+                  <label for="notes">Notes</label>
+                  <textarea id="notes" name="notes" rows="3" placeholder="Any special storage instructions, remarks, etc."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="storage">Storage Instructions</label>
+                  <select id="storage" name="storage">
+                    <option value="room">Room Temperature (15-30°C)</option>
+                    <option value="cool">Cool &amp; Dry Place</option>
+                    <option value="refrigerated">Refrigerated (2-8°C)</option>
+                    <option value="frozen">Frozen (-20°C)</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+
+            <!-- Submit -->
+            <div class="mt-2" style="display: flex; gap: 1rem;">
+              <button type="submit" class="btn btn-primary">&#10004; Add to Inventory</button>
+              <button type="reset" class="btn btn-outline">&#8634; Reset Form</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>

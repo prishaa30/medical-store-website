@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedStock - Inventory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-brand">
+        <h2>&#9764; MedStock</h2>
+        <p>Inventory Manager</p>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="index.html"><span class="nav-icon">&#9751;</span> Dashboard</a></li>
+        <li><a href="inventory.html" class="active"><span class="nav-icon">&#9881;</span> Inventory</a></li>
+        <li><a href="add-medicine.html"><span class="nav-icon">&#10010;</span> Add Medicine</a></li>
+        <li><a href="expiry.html"><span class="nav-icon">&#9200;</span> Expiry Tracker</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        MedStock v1.0 &mdash; Made for Indian Medical Stores
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header flex-between">
+        <div>
+          <h1>Inventory</h1>
+          <p>Complete list of all medicines in your store</p>
+        </div>
+        <a href="add-medicine.html" class="btn btn-primary">&#10010; Add Medicine</a>
+      </div>
+
+      <!-- Category Filters (CSS-only using details) -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Filter by Category</h2>
+        </div>
+        <div class="card-body">
+          <div class="quick-actions">
+            <a href="#tablets" class="quick-action-card">
+              <div class="action-icon">&#128138;</div>
+              <div class="action-label">Tablets</div>
+              <div class="action-desc">142 items</div>
+            </a>
+            <a href="#syrups" class="quick-action-card">
+              <div class="action-icon">&#129514;</div>
+              <div class="action-label">Syrups</div>
+              <div class="action-desc">38 items</div>
+            </a>
+            <a href="#injections" class="quick-action-card">
+              <div class="action-icon">&#128137;</div>
+              <div class="action-label">Injections</div>
+              <div class="action-desc">28 items</div>
+            </a>
+            <a href="#others" class="quick-action-card">
+              <div class="action-icon">&#129657;</div>
+              <div class="action-label">Others</div>
+              <div class="action-desc">40 items</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tablets Section -->
+      <div class="card" id="tablets">
+        <div class="card-header">
+          <h2>&#128138; Tablets &amp; Capsules</h2>
+          <span class="badge badge-info">142 items</span>
+        </div>
+        <div class="card-body">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Medicine Name</th>
+                  <th>Batch No.</th>
+                  <th>Manufacturer</th>
+                  <th>MRP (&#8377;)</th>
+                  <th>Stock</th>
+                  <th>Stock Level</th>
+                  <th>Expiry</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Paracetamol 500mg</strong></td>
+                  <td>BT-2024-001</td>
+                  <td>Cipla Ltd</td>
+                  <td>32.00</td>
+                  <td>200</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill high"></div></div></td>
+                  <td>Dec 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Amoxicillin 250mg</strong></td>
+                  <td>BT-2024-012</td>
+                  <td>Sun Pharma</td>
+                  <td>85.00</td>
+                  <td>100</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill high"></div></div></td>
+                  <td>Sep 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Cetirizine 10mg</strong></td>
+                  <td>BT-2024-023</td>
+                  <td>Dr. Reddy's</td>
+                  <td>25.00</td>
+                  <td>150</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill high"></div></div></td>
+                  <td>Jun 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Metformin 500mg</strong></td>
+                  <td>BT-2024-034</td>
+                  <td>USV Pvt Ltd</td>
+                  <td>48.00</td>
+                  <td>5</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill low"></div></div></td>
+                  <td>Mar 2027</td>
+                  <td><span class="badge badge-danger">Low Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Azithromycin 500mg</strong></td>
+                  <td>BT-2024-045</td>
+                  <td>Alkem Labs</td>
+                  <td>72.00</td>
+                  <td>8</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill low"></div></div></td>
+                  <td>Nov 2026</td>
+                  <td><span class="badge badge-danger">Low Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Omeprazole 20mg</strong></td>
+                  <td>BT-2024-056</td>
+                  <td>Cipla Ltd</td>
+                  <td>55.00</td>
+                  <td>12</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill medium"></div></div></td>
+                  <td>Aug 2027</td>
+                  <td><span class="badge badge-warning">Low Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Dolo 650mg</strong></td>
+                  <td>BT-2024-067</td>
+                  <td>Micro Labs</td>
+                  <td>30.00</td>
+                  <td>15</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill medium"></div></div></td>
+                  <td>Apr 2026</td>
+                  <td><span class="badge badge-warning">Expiring Soon</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Crocin Advance</strong></td>
+                  <td>BT-2024-078</td>
+                  <td>GSK</td>
+                  <td>28.00</td>
+                  <td>3</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill low"></div></div></td>
+                  <td>Jan 2027</td>
+                  <td><span class="badge badge-danger">Low Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Atorvastatin 10mg</strong></td>
+                  <td>BT-2024-089</td>
+                  <td>Zydus Cadila</td>
+                  <td>62.00</td>
+                  <td>90</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill high"></div></div></td>
+                  <td>Feb 2028</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Pantoprazole 40mg</strong></td>
+                  <td>BT-2024-090</td>
+                  <td>Torrent Pharma</td>
+                  <td>68.00</td>
+                  <td>45</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill medium"></div></div></td>
+                  <td>Oct 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Syrups Section -->
+      <div class="card" id="syrups">
+        <div class="card-header">
+          <h2>&#129514; Syrups &amp; Liquids</h2>
+          <span class="badge badge-info">38 items</span>
+        </div>
+        <div class="card-body">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Medicine Name</th>
+                  <th>Batch No.</th>
+                  <th>Manufacturer</th>
+                  <th>MRP (&#8377;)</th>
+                  <th>Stock</th>
+                  <th>Stock Level</th>
+                  <th>Expiry</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Benadryl Cough Syrup 100ml</strong></td>
+                  <td>SY-2024-001</td>
+                  <td>Johnson &amp; Johnson</td>
+                  <td>95.00</td>
+                  <td>35</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill medium"></div></div></td>
+                  <td>Jul 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Grilinctus Syrup 100ml</strong></td>
+                  <td>SY-2024-012</td>
+                  <td>Franco-Indian</td>
+                  <td>78.00</td>
+                  <td>22</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill medium"></div></div></td>
+                  <td>May 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Digene Gel 200ml</strong></td>
+                  <td>SY-2024-023</td>
+                  <td>Abbott</td>
+                  <td>110.00</td>
+                  <td>4</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill low"></div></div></td>
+                  <td>Mar 2026</td>
+                  <td><span class="badge badge-danger">Low Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Lactulose Solution 200ml</strong></td>
+                  <td>SY-2024-034</td>
+                  <td>Abbot India</td>
+                  <td>145.00</td>
+                  <td>18</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill medium"></div></div></td>
+                  <td>Sep 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Injections Section -->
+      <div class="card" id="injections">
+        <div class="card-header">
+          <h2>&#128137; Injections</h2>
+          <span class="badge badge-info">28 items</span>
+        </div>
+        <div class="card-body">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Medicine Name</th>
+                  <th>Batch No.</th>
+                  <th>Manufacturer</th>
+                  <th>MRP (&#8377;)</th>
+                  <th>Stock</th>
+                  <th>Stock Level</th>
+                  <th>Expiry</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Insulin Glargine 3ml</strong></td>
+                  <td>IN-2024-001</td>
+                  <td>Sanofi India</td>
+                  <td>520.00</td>
+                  <td>25</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill medium"></div></div></td>
+                  <td>Aug 2026</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Diclofenac Sodium 3ml</strong></td>
+                  <td>IN-2024-012</td>
+                  <td>Novartis India</td>
+                  <td>15.00</td>
+                  <td>60</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill high"></div></div></td>
+                  <td>Dec 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Ranitidine Inj. 2ml</strong></td>
+                  <td>IN-2024-023</td>
+                  <td>Cipla Ltd</td>
+                  <td>12.00</td>
+                  <td>7</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill low"></div></div></td>
+                  <td>Apr 2026</td>
+                  <td><span class="badge badge-danger">Expiring Soon</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Others Section -->
+      <div class="card" id="others">
+        <div class="card-header">
+          <h2>&#129657; Others (ORS, Ointments, Drops)</h2>
+          <span class="badge badge-info">40 items</span>
+        </div>
+        <div class="card-body">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Medicine Name</th>
+                  <th>Batch No.</th>
+                  <th>Manufacturer</th>
+                  <th>MRP (&#8377;)</th>
+                  <th>Stock</th>
+                  <th>Stock Level</th>
+                  <th>Expiry</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>ORS Powder (WHO formula)</strong></td>
+                  <td>OT-2024-001</td>
+                  <td>FDC Ltd</td>
+                  <td>22.00</td>
+                  <td>300</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill full"></div></div></td>
+                  <td>Jan 2028</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Betadine Ointment 20g</strong></td>
+                  <td>OT-2024-012</td>
+                  <td>Win-Medicare</td>
+                  <td>55.00</td>
+                  <td>40</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill medium"></div></div></td>
+                  <td>Nov 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Ciprodex Ear Drops 10ml</strong></td>
+                  <td>OT-2024-023</td>
+                  <td>Alcon India</td>
+                  <td>120.00</td>
+                  <td>10</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill low"></div></div></td>
+                  <td>Jun 2026</td>
+                  <td><span class="badge badge-warning">Low Stock</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Volini Spray 40g</strong></td>
+                  <td>OT-2024-034</td>
+                  <td>Ranbaxy</td>
+                  <td>215.00</td>
+                  <td>28</td>
+                  <td><div class="stock-bar"><div class="stock-bar-fill medium"></div></div></td>
+                  <td>Sep 2027</td>
+                  <td><span class="badge badge-success">In Stock</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
